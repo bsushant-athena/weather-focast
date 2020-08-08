@@ -23,7 +23,7 @@ public class WeatherController {
 
 	@Autowired private WeatherApi weatherService;
 	
-	@GetMapping(value = "/api/waether/v1",produces = "application/json")
+	@GetMapping(value = "/api/weather/v1",produces = "application/json")
 	public ResponseEntity<?> getWeatherReport(){
 		 SimpleDateFormat formatter = new SimpleDateFormat("yyy-MM-dd");
 		 Date date;

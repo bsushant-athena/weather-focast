@@ -1,1 +1,1 @@
-http://localhost:8081/api/waether/v1
+http://localhost:8081/api/weather/v1
