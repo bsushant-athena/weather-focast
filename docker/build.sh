@@ -1,2 +1,1 @@
-docker build -t weatherapp-local:0.0.1 -t weatherapp-local:latest \
-.
+docker build -t weatherapp-local:1.0.0 -t weatherapp-local .
