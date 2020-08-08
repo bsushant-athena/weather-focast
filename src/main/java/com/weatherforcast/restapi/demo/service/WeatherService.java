@@ -22,7 +22,8 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class WeatherService implements WeatherApi {
 	
-	@Autowired private WeatherRepository weatherRepository;
+	@Autowired 
+	private WeatherRepository weatherRepository;
 
 	@Override
 	public ResponseEntity<?> getReport() {
@@ -36,11 +37,11 @@ public class WeatherService implements WeatherApi {
 			errorResponse.setErrorMessage(e.getLocalizedMessage());
 		}
 		
-		
 		log.info("report-{}",report.getList().size());
 		SuccessResponse response = new SuccessResponse();
 		boolean highTemp =false;
 		boolean rain = false;
+
 		for(List wList : report.getList()) {
 
 			
@@ -58,11 +59,13 @@ public class WeatherService implements WeatherApi {
 			response.setResponseCode("200");
 			response.setAdvise("Carry Umbrella");
 			return new ResponseEntity<SuccessResponse>(response,HttpStatus.OK);
-		}else if(highTemp){
-		response.setResponseCode("200");
-		response.setAdvise("Use SUn screen lotion");
-		return new ResponseEntity<SuccessResponse>(response,HttpStatus.OK);
-		}else {
+		}
+		else if(highTemp){
+			response.setResponseCode("200");
+			response.setAdvise("Use SUn screen lotion");
+			return new ResponseEntity<SuccessResponse>(response,HttpStatus.OK);
+		}
+		else {
 			response.setResponseCode("200");
 			response.setAdvise("enjoy");
 			return new ResponseEntity<SuccessResponse>(response,HttpStatus.OK);

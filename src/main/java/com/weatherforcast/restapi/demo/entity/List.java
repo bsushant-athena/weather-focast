@@ -12,15 +12,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-"dt",
-"main",
-"weather",
-"clouds",
-"wind",
-"sys",
-"dt_txt",
-"rain",
-"snow"
+	"dt",
+	"main",
+	"weather",
+	"clouds",
+	"wind",
+	"sys",
+	"dt_txt",
+	"rain",
+	"snow"
 })
 public class List {
 
