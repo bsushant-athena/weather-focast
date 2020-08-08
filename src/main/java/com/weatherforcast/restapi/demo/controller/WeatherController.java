@@ -21,14 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class WeatherController {
 
-	@Autowired private WeatherApi weatherService;
+	@Autowired 
+	private WeatherApi weatherService;
 	
 	@GetMapping(value = "/api/weather/v1",produces = "application/json")
 	public ResponseEntity<?> getWeatherReport(){
 		 SimpleDateFormat formatter = new SimpleDateFormat("yyy-MM-dd");
 		 Date date;
 		return weatherService.getReport();
-		
-		
 	}
 }

@@ -16,7 +16,6 @@ public class DemoApplication {
 	public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
 		RestTemplate restTemplate = restTemplateBuilder.build();
 		return restTemplate;
-//		return restTemplateBuilder.build();
 	}
 
 }
