@@ -43,9 +43,8 @@ public class WeatherService implements WeatherApi {
 		boolean rain = false;
 
 		for(List wList : report.getList()) {
-
 			
-			if(wList.getMain().getTempMin()>40  ) {
+			if(wList.getMain().getTempMin()>40) {
 				highTemp = true;
 			}
 			for(Weather weather : wList.getWeather()) {
